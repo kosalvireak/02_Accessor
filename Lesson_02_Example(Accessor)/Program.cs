@@ -26,6 +26,22 @@ namespace Lesson_02_Example_Accessor_
     {
         static void Main(string[] args)
         {
+            House hObj = new House();
+            Console.Write("Enter the type of House");
+            hObj.strType = Console.ReadLine();
+
+            Console.Write("Enter the address of House");
+            hObj.Address = Console.ReadLine(); // The value we typed go to private variable
+                                               // In line 16 we set that value to strAddress
+
+            Console.Write("Enter the price");
+            hObj.Price = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Type = {0}, Address = {1}, Price = {2}",
+                hObj.strType,hObj.Address,hObj.Price); // When we call hObj.Address, It will go to line 15
+                                                       // it will get value from strAddress 
+                                                       // Overall public string Address doesn't store anything,
+                                                       // they just use to give and get value from private string strAddress
         }
     }
 }
