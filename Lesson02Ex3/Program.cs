@@ -25,7 +25,8 @@ namespace Lesson02Ex3
     {
         static void Main(string[] args)
         {
-                Circle cObj = new Circle();
+                Circle cObj; //declare an object name of type Circle 
+                cObj = new Circle(); // instantiate an object && assign it to the object name cObj
                 Console.Write("Enter the radius: ");
                 cObj.Radius = float.Parse(Console.ReadLine());
 
